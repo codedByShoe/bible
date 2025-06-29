@@ -1,0 +1,38 @@
+<!-- Header -->
+<div class="flex items-center justify-between p-4 bg-white dark:bg-neutral-800">
+  <div class="flex items-center">
+    <div class="w-2 h-14 bg-orange-600 mr-3"></div>
+    <h1 class="text-7xl font-light text-gray-900 dark:text-white"><%= @chapter.book.name %></h1>
+  </div>
+</div>
+<!-- Chapter Content -->
+<div class="flex-1 p-6 bg-white dark:bg-neutral-800">
+  <!-- Chapter Number -->
+  <div class="text-5xl font-light text-orange-600 mb-6 leading-none">
+    <%= @chapter.number %>
+  </div>
+  <!-- Verses -->
+  <div
+    class="
+      space-y-4 font-serif text-base leading-relaxed text-gray-900 dark:text-gray-100
+    "
+  >
+    <% @verses.each do |verse| %>
+      <div class="verse">
+        <span class="text-orange-600 font-semibold text-sm mr-2 select-none"><%= verse.number %></span>
+        <span class="verse-text"><%= verse.text %></span>
+      </div>
+    <% end %>
+  </div>
+</div>
+<!-- Footer Progress -->
+<div
+  class="
+    fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white dark:bg-neutral-800
+    px-4 py-2 rounded-full border border-gray-200 dark:border-neutral-500 shadow-lg
+  "
+>
+  <span class="text-sm text-gray-600 dark:text-gray-400">
+    <%= @verses.count %>/1567
+  </span>
+</div>

@@ -1,0 +1,8 @@
+<h1><%= @book.name %></h1>
+
+<div class="flex flex-col gap-4">
+  <% @chapters.each do |chapter| %>
+    <%= link_to chapter.number,
+    chapter_verses_path(chapter),
+    class: "text-blue-500 hover:underline" %>
+  <% end %>

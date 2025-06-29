@@ -1,0 +1,113 @@
+<div
+  id="searchOverlay"
+  data-search-target="overlay"
+  data-controller="search"
+  class="fixed inset-0 bg-black/50 z-50 hidden"
+>
+  <div class="bg-white dark:bg-neutral-800 m-4 mt-20 rounded-2xl shadow-xl">
+    <div class="p-4 border-b border-gray-100 dark:border-neutral-700">
+      <div class="flex items-center space-x-3">
+        <svg
+          class="w-5 h-5 text-gray-400 dark:text-gray-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+          />
+        </svg>
+        <input
+          type="text"
+          data-search-target="input"
+          placeholder="Search scriptures, topics, or verses..."
+          class="flex-1 text-lg outline-none"
+        >
+        <button
+          data-action="click->search#toggle"
+          class="
+            p-2 text-gray-400 hover:text-gray-600 cursor-pointer dark:text-gray-300
+            hover:dark:text-gray-200
+          "
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="p-4">
+      <h3
+        class="
+          text-sm font-semibold text-gray-500 dark:text-gray-300 mb-3 uppercase
+          tracking-wider
+        "
+      >Popular Searches</h3>
+      <div class="space-y-3">
+        <div
+          class="
+            flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer
+            dark:hover:bg-neutral-700
+          "
+        >
+          <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+              />
+            </svg>
+          </div>
+          <div>
+            <p class="font-medium text-gray-900 dark:text-gray-100">Love</p>
+            <p class="text-sm text-gray-500 dark:text-gray-300">47 verses</p>
+          </div>
+        </div>
+        <div
+          class="
+            flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer
+            dark:hover:bg-neutral-700
+          "
+        >
+          <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+            <svg class="w-4 h-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-medium text-gray-900 dark:text-gray-100">Peace</p>
+            <p class="text-sm text-gray-500 dark:text-gray-300">31 verses</p>
+          </div>
+        </div>
+        <div
+          class="
+            flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 cursor-pointer
+            dark:hover:bg-neutral-700
+          "
+        >
+          <div
+            class="
+              w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center
+              dark:bg-neutral-700
+            "
+          >
+            <svg class="w-4 h-4 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div>
+            <p class="font-medium text-gray-900 dark:text-gray-100">Strength</p>
+            <p class="text-sm text-gray-500 dark:text-gray-300">29 verses</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
